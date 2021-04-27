@@ -24,10 +24,12 @@ Comparison of different Algorithms and parameters we have tried:
 
 Plots of Training epoch Vs loss and Training epoch Vs Accuracy for CNN based architecture:
 
+<img width="340" alt="cnn_plots" src="https://user-images.githubusercontent.com/55220359/116319440-87280280-a784-11eb-9084-a2ce122f875b.png">
 
 Plots of Training epoch Vs loss and Training epoch Vs Accuracy for ResNet(Residual Neural
 Networks):
 
+<img width="340" alt="resnet" src="https://user-images.githubusercontent.com/55220359/116319449-8becb680-a784-11eb-9e62-20a66723bf15.png">
 
 ResNet architecture is based on CNN architecture, but it is more complex than basic CNN model. With one convolution layer of CNN, we have observed more accuracy. With less number of Epochs for CNN and ResNet, we are observing more accuracy. The batch size of the model is also selected moderately, so that the model can train on the data properly, to get better accuracy on the test dataset. Usually, lower value of Learning Rate reduces the overfitting of the model. However, in this case we have taken the default value i.e, 0.001 for the Adam Optimizer. The run time depends on epochs, we have observed more time for CNN because, the epochs are more. Although, for ResNet the epochs are less, hence the run time is less. It would give more accuracy by changing the hyperparameters of the model. Nevertheless, we have implemented the CNN model with varied parameter values compared to ResNet. Therefore, For the image classification of Fashion MNIST dataset we have observed more accuracy for CNN model with one convolutional layer which is 88.08%.
 
@@ -44,3 +46,31 @@ References
 [5] http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/
 
 [6] https://github.com/nuclearczy/SVM_and_CNN_on_Fashion_MNIST_Dataset
+
+[7] https://github.com/shoji9x9/Fashion-MNIST-By-ResNet/blob/master/FashionMNIST-by-ResNet-50.ipynb
+
+[8] https://towardsdatascience.com/understanding-and-coding-a-resnet-in-keras446d7ff84d33
+
+[9] https://www.kaggle.com/girishgupta/fashion-mnist-using-resnet
+
+[10] https://towardsdatascience.com/introduction-to-resnets-c0a830a288a4
+
+[11] https://stackoverflow.com/questions/54589669/confusion-matrix-error-classificationmetrics-cant-handle-a-mix-of-multilabel
+
+[12] https://www.kaggle.com/akumaldo/resnet-from-scratch-keras
+
+[13] https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithmf10ba6e38234
+
+[14] https://towardsdatascience.com/the-4-convolutional-neural-network-models-that-canclassify-your-fashion-images-9fe7f3e5399d
+
+[15] https://keras.io/
+
+[16] https://bmcproc.biomedcentral.com/articles/10.1186/1753-6561-5-S3-S11
+
+[17] https://towardsdatascience.com/understanding-and-coding-a-resnet-in-keras446d7ff84d33
+
+[18] https://machinelearningmastery.com/understand-the-dynamics-of-learning-rate-ondeep-learning-neural-networks/
+
+[19] https://towardsdatascience.com/epoch-vs-iterations-vs-batch-size-4dfb9c7ce9c9
+
+[20] https://www.kaggle.com/faressayah/fashion-classification-mnist-cnn-tutorial
