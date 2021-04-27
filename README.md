@@ -10,3 +10,37 @@ Initially, we when were implementing the PCA with SVM model, we tried to apply t
 After, applying the gridsearchCV to the whole data, we still could not find any improvement in the time it was taking. After, giving it a thought we have decided to split the data and to train the model initially to get an idea about the best Hyperparameters. We have applied this technique of GridSearchCV and RandomSearchCV to SVM and Random forest. For Gradient Boosting Classifier, we have directly applied the best parameters based on Zalando’s research link. Eventually, we got an idea about how to apply the hyper-parameters to the models, and started our trial and error method to get highest accuracy for the model to predict image classification for Fashion-MNIST dataset.
 
 In the second part, We applied the Basic CNN model with single layer, two layers and also with three layers on to the dataset. We have also applied Resnet with two different epochs.
+
+<img width="350" alt="Screen Shot 2021-04-27 at 5 52 45 PM" src="https://user-images.githubusercontent.com/55220359/116317706-b38e4f80-a781-11eb-9434-169637d62b6e.png">
+
+We built our model using the Keras framework. The reason for using Keras framework is that it is a high-level neural networks API and capable of running on top of Tensor flow, CNTK or Theano.
+
+Comparison of different Algorithms and parameters we have tried:
+• After implementing the models that mentioned above, we got the best accuracy for CNN with one convolutional layer having the parameters as epochs= 50, batch size= 128 and learning rate as default value(0.001). The accuracy of the model obtained is
+88.08%. The run time for training and testing data is 68.54 minutes.
+• The next best accuracy was obtained for CNN with two convolutional layer having the parameters as epochs=100, batch size=32 and with default learning rate. The model accuracy is 81.2%.
+• For CNN with three convolutional layers with epochs=100, batch size= 64 and lr=0.0001, the accuracy is 80.48%.
+• Finally, with the implementation of Resnet, we got an accuracy of 86.02% with parameters as epochs = 25, batch size = 100. The run time for training and testing data is 10.92 minutes.
+
+Plots of Training epoch Vs loss and Training epoch Vs Accuracy for CNN based architecture:
+
+
+Plots of Training epoch Vs loss and Training epoch Vs Accuracy for ResNet(Residual Neural
+Networks):
+
+
+ResNet architecture is based on CNN architecture, but it is more complex than basic CNN model. With one convolution layer of CNN, we have observed more accuracy. With less number of Epochs for CNN and ResNet, we are observing more accuracy. The batch size of the model is also selected moderately, so that the model can train on the data properly, to get better accuracy on the test dataset. Usually, lower value of Learning Rate reduces the overfitting of the model. However, in this case we have taken the default value i.e, 0.001 for the Adam Optimizer. The run time depends on epochs, we have observed more time for CNN because, the epochs are more. Although, for ResNet the epochs are less, hence the run time is less. It would give more accuracy by changing the hyperparameters of the model. Nevertheless, we have implemented the CNN model with varied parameter values compared to ResNet. Therefore, For the image classification of Fashion MNIST dataset we have observed more accuracy for CNN model with one convolutional layer which is 88.08%.
+
+References
+
+[1] https://www.machinecurve.com/index.php/2019/09/17/how-to-create-a-cnn-classifierwith-keras/
+
+[2] https://pravarmahajan.github.io/fashion/
+
+[3] https://github.com/cmasch/zalando-fashion-mnist
+
+[4] https://github.com/zalandoresearch/fashion-mnist
+
+[5] http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/
+
+[6] https://github.com/nuclearczy/SVM_and_CNN_on_Fashion_MNIST_Dataset
